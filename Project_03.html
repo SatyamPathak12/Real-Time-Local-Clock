@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Time</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: "Arial", sans-serif;
+        background: linear-gradient(135deg, #71b7e6, #9b59b6);
+        color: #fff;
+        text-align: center;
+      }
+
+      #banner {
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
+
+      #banner span {
+        font-size: 2em;
+        font-weight: bold;
+        letter-spacing: 1px;
+      }
+
+      #clock {
+        font-size: 4em;
+        font-weight: bold;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 20px 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="banner"><span>Local Time</span></div>
+    <div id="clock"></div>
+
+    <script>
+      const clock = document.getElementById("clock");
+      setInterval(function () {
+        const date = new Date();
+        clock.innerHTML = date.toLocaleTimeString();
+      }, 1000);
+    </script>
+  </body>
+</html>
